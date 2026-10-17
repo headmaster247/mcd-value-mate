@@ -1,0 +1,2 @@
+
+"""McValue Mate application modules."""
