@@ -1,0 +1,11 @@
+
+{
+  "budget": 30,
+  "diners": 1,
+  "preferences": {
+    "meal_type": "lunch",
+    "priorities": [
+      "value_for_money"
+    ]
+  }
+}
