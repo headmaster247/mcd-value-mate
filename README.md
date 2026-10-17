@@ -1,46 +1,62 @@
 # 麦麦精算师 · McValue Mate
 
-An AI-powered meal planning Skill for McDonald's China.
+**An AI-powered meal planning Skill for McDonald's China.**
 
-## Project Overview
+## 项目简介
 
-McValue Mate is an AI Skill designed to help users plan McDonald's meals according to their budget and preferences, using information returned by the official McDonald's China MCP tools.
+McValue Mate 是一个基于麦当劳中国官方 MCP 能力开发的 AI Skill，旨在帮助用户根据预算、餐品信息、可用优惠和营养目标制定更合理的点餐方案。
 
-## Features
+## 解决的问题
 
-- Budget-based meal recommendations.
-- Meal combination and price comparison.
-- Coupon information analysis when supported by the official tools.
-- Nutritional information comparison when data is available.
-- Alternative meal suggestions and budget calculations.
+- 预算有限时，不知道怎样组合餐品。
+- 餐品、优惠和营养信息分散，比较成本较高。
+- 修改餐品组合后，需要重新核算价格和营养数据。
 
-## Architecture
+## 核心功能
 
-- Official McDonald's China MCP Server.
-- AI Skill instructions and tool orchestration.
-- Local meal filtering and budget calculations.
-- Automated tests and usage examples.
+- 预算约束下的餐品组合推荐。
+- 在官方工具支持的范围内查询优惠信息。
+- 根据可获得的官方营养数据统计餐品营养。
+- 提供替代组合及价格差异分析。
+- 生成结构化点餐清单。
 
-## Requirements
+## 技术方案
 
-A compatible AI client, an authorized MCP connection, and the runtime dependencies required by the implemented version.
+- 麦当劳中国官方 MCP Server。
+- AI Skill 指令与工具调用编排。
+- 基于实际查询结果的预算计算与餐品筛选。
+- 自动化测试与示例输出。
 
-## Setup
+## 环境要求
 
-1. Configure the official MCP server using `mcp-config.example.json` as a reference.
-2. Configure your authentication token securely.
-3. Load `SKILL.md` in a compatible client.
-4. Enter a budget and meal preferences.
-5. Review the returned recommendations and their data sources.
+- 支持麦当劳 MCP 的 AI 客户端。
+- 有效的麦当劳 MCP Token。
+- 根据实际实现选择所需的运行环境。
 
-## Security
+## 安装与使用
 
-Never commit real MCP tokens, passwords, or other credentials to this repository.
+1. 克隆本项目。
+2. 按照 `mcp-config.example.json` 配置 MCP 连接。
+3. 根据客户端说明加载 `SKILL.md`。
+4. 输入预算、人数和饮食偏好。
+5. 检查推荐结果与数据来源。
 
-## Project Status
+## 示例
 
-Initial development. Features will be marked as complete only after implementation and testing.
+用户输入：
 
-## Disclaimer
+“请为我推荐一份不超过 30 元的午餐，优先考虑蛋白质，并比较可用优惠。”
 
-This is an independent community project and is not an official McDonald's product or endorsement.
+系统根据实际可用的官方数据返回候选组合、价格明细、营养信息和推荐理由。
+
+## 数据与安全
+
+本项目不在公开代码中存储真实 Token。实际餐品、价格、优惠及营养数据应以官方工具的实际返回结果为准。
+
+## 项目状态
+
+开发中。请以当前版本实际实现和测试通过的功能为准。
+
+## 免责声明
+
+本项目为独立开发的社区参赛作品，不代表麦当劳官方产品或官方背书。使用者应遵守相关服务条款。
